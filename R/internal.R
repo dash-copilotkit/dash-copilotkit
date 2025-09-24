@@ -1,0 +1,27 @@
+.dashCopilotkitComponents_js_metadata <- function() {
+deps_metadata <- list(`dash_copilotkit_components` = structure(list(name = "dash_copilotkit_components",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'async-DashCopilotkitComponents.js',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashCopilotkitComponents",
+all_files = FALSE, async = TRUE), class = "html_dependency"),
+`dash_copilotkit_components` = structure(list(name = "dash_copilotkit_components",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'async-DashCopilotkitComponents.js.map',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashCopilotkitComponents",
+all_files = FALSE, dynamic = TRUE), class = "html_dependency"),
+`dash_copilotkit_components` = structure(list(name = "dash_copilotkit_components",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'dash_copilotkit_components.min.js',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashCopilotkitComponents",
+all_files = FALSE), class = "html_dependency"),
+`dash_copilotkit_components` = structure(list(name = "dash_copilotkit_components",
+version = "0.0.1", src = list(href = NULL,
+file = "deps"), meta = NULL,
+script = 'dash_copilotkit_components.min.js.map',
+stylesheet = NULL, head = NULL, attachment = NULL, package = "dashCopilotkitComponents",
+all_files = FALSE, dynamic = TRUE), class = "html_dependency"))
+return(deps_metadata)
+}

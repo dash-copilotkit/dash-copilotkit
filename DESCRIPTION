@@ -1,0 +1,13 @@
+Package: dashCopilotkitComponents
+Title: dash-copilotkit
+Version: 0.0.1
+Description: dash-copilotkit
+Depends: R (>= 3.0.2)
+Imports: 
+Suggests: 
+License: MIT + file LICENSE
+URL: https://github.com/dash-copilotkit/dash-copilotkit-components
+BugReports: https://github.com/dash-copilotkit/dash-copilotkit-components/issues
+Encoding: UTF-8
+LazyData: true
+KeepSource: true

@@ -1,0 +1,11 @@
+include dash_copilotkit_components/dash_copilotkit_components.min.js
+include dash_copilotkit_components/dash_copilotkit_components.min.js.map
+include dash_copilotkit_components/async-*.js
+include dash_copilotkit_components/async-*.js.map
+include dash_copilotkit_components/*-shared.js
+include dash_copilotkit_components/*-shared.js.map
+include dash_copilotkit_components/metadata.json
+include dash_copilotkit_components/package-info.json
+include README.md
+include LICENSE
+include package.json
