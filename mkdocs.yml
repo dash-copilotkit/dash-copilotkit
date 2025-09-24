@@ -4,8 +4,8 @@ site_author: Dash CopilotKit Team
 site_url: https://dash-copilotkit.biyani.xyz
 
 # Repository
-repo_name: dash-copilotkit/dash-copilitkit
-repo_url: https://github.com/dash-copilotkit/dash-copilitkit
+repo_name: dash-copilotkit/dash-copilotkit
+repo_url: https://github.com/dash-copilotkit/dash-copilotkit
 edit_uri: edit/main/docs/
 
 # Copyright
@@ -121,7 +121,7 @@ markdown_extensions:
       normalize_issue_symbols: true
       repo_url_shorthand: true
       user: dash-copilotkit
-      repo: dash-copilitkit
+      repo: dash-copilotkit
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets:
