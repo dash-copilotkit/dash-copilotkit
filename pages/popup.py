@@ -104,17 +104,9 @@ def create_configuration_panel():
                 ], md=3),
                 
                 dbc.Col([
-                    html.Label("Position", className="fw-bold mb-2"),
-                    dbc.Select(
-                        id="popup-position",
-                        options=[
-                            {"label": "Bottom Right", "value": "bottom-right"},
-                            {"label": "Bottom Left", "value": "bottom-left"},
-                            {"label": "Top Right", "value": "top-right"},
-                            {"label": "Top Left", "value": "top-left"}
-                        ],
-                        value="bottom-right"
-                    )
+                    html.Label("Note", className="fw-bold mb-2"),
+                    html.P("Popup position is automatically managed by the component",
+                           className="text-muted small")
                 ], md=3)
             ])
         ])
@@ -227,10 +219,9 @@ def toggle_password_visibility(n_clicks):
      Input("popup-instructions", "value"),
      Input("popup-title", "value"),
      Input("popup-initial", "value"),
-     Input("popup-show-initially", "value"),
-     Input("popup-position", "value")]
+     Input("popup-show-initially", "value")]
 )
-def update_popup_demo(api_key, instructions, title, initial, show_initially, position):
+def update_popup_demo(api_key, instructions, title, initial, show_initially):
     if not api_key:
         return dbc.Alert([
             html.I(className="fas fa-key me-2"),
@@ -246,8 +237,7 @@ def update_popup_demo(api_key, instructions, title, initial, show_initially, pos
             'title': title or 'Support Assistant',
             'initial': initial or 'Hi! How can I help you today?'
         },
-        show_initially=show_initially == "true",
-        position=position or 'bottom-right'
+        show_initially=show_initially == "true"
     )
 
 # Page layout

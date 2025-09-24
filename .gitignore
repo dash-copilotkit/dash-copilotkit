@@ -1,3 +1,6 @@
+# PyPi
+.pypirc
+
 # --- Python / Dash ---
 __pycache__/
 *.py[cod]

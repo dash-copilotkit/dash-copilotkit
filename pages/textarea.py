@@ -83,28 +83,30 @@ def create_configuration_panel():
                 ], md=4),
                 
                 dbc.Col([
-                    html.Label("Rows", className="fw-bold mb-2"),
+                    html.Label("Height", className="fw-bold mb-2"),
                     dbc.Select(
-                        id="textarea-rows",
+                        id="textarea-height",
                         options=[
-                            {"label": "5 rows", "value": "5"},
-                            {"label": "8 rows", "value": "8"},
-                            {"label": "10 rows", "value": "10"},
-                            {"label": "15 rows", "value": "15"}
+                            {"label": "200px", "value": "200px"},
+                            {"label": "300px", "value": "300px"},
+                            {"label": "400px", "value": "400px"},
+                            {"label": "500px", "value": "500px"}
                         ],
-                        value="8"
+                        value="300px"
                     )
                 ], md=4),
-                
+
                 dbc.Col([
-                    html.Label("Auto-resize", className="fw-bold mb-2"),
+                    html.Label("Width", className="fw-bold mb-2"),
                     dbc.Select(
-                        id="textarea-autoresize",
+                        id="textarea-width",
                         options=[
-                            {"label": "Enabled", "value": "true"},
-                            {"label": "Disabled", "value": "false"}
+                            {"label": "100%", "value": "100%"},
+                            {"label": "80%", "value": "80%"},
+                            {"label": "500px", "value": "500px"},
+                            {"label": "600px", "value": "600px"}
                         ],
-                        value="true"
+                        value="100%"
                     )
                 ], md=4)
             ])
@@ -249,10 +251,10 @@ def toggle_password_visibility(n_clicks):
     [Input("textarea-api-key", "value"),
      Input("textarea-instructions", "value"),
      Input("textarea-placeholder", "value"),
-     Input("textarea-rows", "value"),
-     Input("textarea-autoresize", "value")]
+     Input("textarea-height", "value"),
+     Input("textarea-width", "value")]
 )
-def update_textarea_demo(api_key, instructions, placeholder, rows, autoresize):
+def update_textarea_demo(api_key, instructions, placeholder, height, width):
     if not api_key:
         return dbc.Alert([
             html.I(className="fas fa-key me-2"),
@@ -266,8 +268,8 @@ def update_textarea_demo(api_key, instructions, placeholder, rows, autoresize):
         instructions=instructions or "You are a helpful writing assistant.",
         placeholder=placeholder or "Start typing here...",
         value="",
-        rows=int(rows) if rows else 8,
-        auto_resize=autoresize == "true"
+        height=height or "300px",
+        width=width or "100%"
     )
 
 @callback(

@@ -4,8 +4,9 @@ import dash_bootstrap_components as dbc
 
 # Initialize the Dash app with pages support
 app = Dash(
-    __name__, 
+    __name__,
     use_pages=True,
+    suppress_callback_exceptions=True,
     external_stylesheets=[
         dbc.themes.BOOTSTRAP,
         "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
