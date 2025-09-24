@@ -48,7 +48,6 @@ app.layout = html.Div([
 
     # CopilotKit Component
     html.Div(id='copilot-container'),
-
     # Output for textarea mode
     html.Div(id='textarea-output', style={'marginTop': '20px'})
 ])
