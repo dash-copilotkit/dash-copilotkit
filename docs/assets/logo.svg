@@ -1,0 +1,45 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#gradient)" opacity="0.1"/>
+  
+  <!-- Robot head -->
+  <rect x="60" y="50" width="80" height="70" rx="15" fill="url(#gradient)"/>
+  
+  <!-- Eyes -->
+  <circle cx="80" cy="75" r="8" fill="white"/>
+  <circle cx="120" cy="75" r="8" fill="white"/>
+  <circle cx="80" cy="75" r="4" fill="#1e293b"/>
+  <circle cx="120" cy="75" r="4" fill="#1e293b"/>
+  
+  <!-- Mouth -->
+  <rect x="85" y="95" width="30" height="4" rx="2" fill="white"/>
+  
+  <!-- Antenna -->
+  <line x1="100" y1="50" x2="100" y2="35" stroke="url(#gradient)" stroke-width="3"/>
+  <circle cx="100" cy="32" r="4" fill="url(#gradient)"/>
+  
+  <!-- Chat bubble -->
+  <ellipse cx="150" cy="130" rx="35" ry="25" fill="white" stroke="url(#gradient)" stroke-width="2"/>
+  <path d="M125 145 L135 155 L145 145" fill="white" stroke="url(#gradient)" stroke-width="2"/>
+  
+  <!-- Chat text lines -->
+  <line x1="130" y1="125" x2="170" y2="125" stroke="url(#gradient)" stroke-width="2"/>
+  <line x1="130" y1="135" x2="160" y2="135" stroke="url(#gradient)" stroke-width="2"/>
+  
+  <!-- Dash logo elements -->
+  <rect x="20" y="160" width="15" height="4" rx="2" fill="url(#gradient)"/>
+  <rect x="40" y="160" width="25" height="4" rx="2" fill="url(#gradient)"/>
+  <rect x="70" y="160" width="20" height="4" rx="2" fill="url(#gradient)"/>
+  
+  <!-- Text -->
+  <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="url(#gradient)">
+    CopilotKit
+  </text>
+</svg>

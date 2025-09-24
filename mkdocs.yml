@@ -1,0 +1,174 @@
+site_name: Dash CopilotKit Components
+site_description: AI-powered chat interfaces for Dash applications
+site_author: Dash CopilotKit Team
+site_url: https://dash-copilotkit.biyani.xyz
+
+# Repository
+repo_name: dash-copilotkit/dash-copilitkit
+repo_url: https://github.com/dash-copilotkit/dash-copilitkit
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2024 Dash CopilotKit Components
+
+# Configuration
+theme:
+  name: material
+  custom_dir: docs/overrides
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.ico
+  logo: assets/logo.png
+  icon:
+    logo: material/robot
+    repo: fontawesome/brands/github
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
+# Customization
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/dash-copilotkit
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/dash-copilotkit-components/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/dashcopilotkit
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: dash-copilotkit
+      repo: dash-copilitkit
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quick-start.md
+    - Configuration: getting-started/configuration.md
+  - UI Types:
+    - Chat Interface: ui-types/chat.md
+    - Popup Chat: ui-types/popup.md
+    - Sidebar Chat: ui-types/sidebar.md
+    - AI Textarea: ui-types/textarea.md
+  - API Reference:
+    - Component Props: api/props.md
+    - Callbacks: api/callbacks.md
+    - Styling: api/styling.md
+  - Examples:
+    - Basic Usage: examples/basic.md
+    - Advanced Configuration: examples/advanced.md
+    - Custom Styling: examples/styling.md
+    - Integration Patterns: examples/integration.md
+  - Deployment:
+    - Production Setup: deployment/production.md
+    - Environment Variables: deployment/environment.md
+    - Performance Tips: deployment/performance.md
+  - Contributing:
+    - Development Setup: contributing/development.md
+    - Building Components: contributing/building.md
+    - Testing: contributing/testing.md
+  - Changelog: changelog.md
