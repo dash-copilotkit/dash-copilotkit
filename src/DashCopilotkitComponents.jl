@@ -3,9 +3,9 @@ module DashCopilotkitComponents
 using Dash
 
 const resources_path = realpath(joinpath( @__DIR__, "..", "deps"))
-const version = "0.0.1"
+const version = "1.0.0"
 
-include("jl/ckc_dashcopilotkitcomponents.jl")
+include("jl/'ckc'_dashcopilotkitcomponents.jl")
 
 function __init__()
     DashBase.register_package(
@@ -16,14 +16,14 @@ function __init__()
             [
                 DashBase.Resource(
     relative_package_path = "async-DashCopilotkitComponents.js",
-    external_url = "https://unpkg.com/dash_copilotkit_components@0.0.1/dash_copilotkit_components/async-DashCopilotkitComponents.js",
+    external_url = "https://unpkg.com/dash_copilotkit_components@1.0.0/dash_copilotkit_components/async-DashCopilotkitComponents.js",
     dynamic = nothing,
     async = :true,
     type = :js
 ),
 DashBase.Resource(
     relative_package_path = "async-DashCopilotkitComponents.js.map",
-    external_url = "https://unpkg.com/dash_copilotkit_components@0.0.1/dash_copilotkit_components/async-DashCopilotkitComponents.js.map",
+    external_url = "https://unpkg.com/dash_copilotkit_components@1.0.0/dash_copilotkit_components/async-DashCopilotkitComponents.js.map",
     dynamic = true,
     async = nothing,
     type = :js

@@ -1,5 +1,26 @@
+# AI Tool assistant
+.qodo/
+.cursor/
+
+# Security Files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+credentials.json
+
 # PyPi
 .pypirc
+
+metadata.json
+package-info.json
+
+.mkdocs_cache
+MANIFEST*
+*.egg
 
 # --- Python / Dash ---
 __pycache__/
@@ -29,6 +50,8 @@ dist/
 pip-wheel-metadata/
 .wheels/
 site/
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Testing / coverage
 .pytest_cache/
@@ -82,7 +105,13 @@ webpack-stats.json
 # --- OS / Editors ---
 .DS_Store
 Thumbs.db
-.idea/
+.idea/*
+.idea/dictionaries/
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/misc.xml
+.idea/vcs.xml
+
 .vscode/
 *.swp
 *.swo

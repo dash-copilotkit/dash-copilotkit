@@ -1,26 +1,29 @@
 # Dash CopilotKit Components
 
+[![PyPI version](https://badge.fury.io/py/dash-copilotkit-components.svg)](https://badge.fury.io/py/dash-copilotkit-components)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![Dash 2.0+](https://img.shields.io/badge/dash-2.0+-green.svg)](https://dash.plotly.com/)
+
 A comprehensive Dash component library for integrating CopilotKit AI assistants into your Dash applications. This component supports all 4 CopilotKit UI types and is compatible with Dash 3.0.
 
-## Features
+## 🚀 Features
 
-- **4 UI Types**: Chat, Popup, Sidebar, and Textarea interfaces
-- **Flexible API Configuration**: Use CopilotKit Cloud or bring your own API key
-- **Dash 3.0 Compatible**: Updated for the latest Dash version
-- **Customizable**: Full control over styling, instructions, and behavior
+- **4 UI Types**: Chat, Popup, Sidebar, and AI-powered Textarea interfaces
+- **Flexible API Configuration**: Use CopilotKit Cloud or bring your own API key (OpenAI, Anthropic, etc.)
+- **Dash 3.0 Compatible**: Updated for the latest Dash version with modern React 18 support
+- **Fully Customizable**: Complete control over styling, instructions, and behavior
+- **Production Ready**: Comprehensive error handling and performance optimizations
 - **TypeScript Support**: Complete type definitions for all props
 
-## Installation
+## 📦 Installation
 
-1. Install the package:
+Install from PyPI:
 ```bash
 pip install dash-copilotkit-components
 ```
 
-2. Install the required dependencies:
-```bash
-npm install @copilotkit/react-core @copilotkit/react-ui @copilotkit/react-textarea
-```
+The component automatically includes all required JavaScript dependencies.
 
 ## Quick Start
 

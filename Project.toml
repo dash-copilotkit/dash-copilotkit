@@ -1,8 +1,8 @@
 
 name = "DashCopilotkitComponents"
 uuid = "1b08a953-4be3-4667-9a23-05571831c23d"
-authors = ["Vishal Biyani <vishal.biyani@xyz.com>"]
-version = "0.0.1"
+authors = ["Vishal Biyani <vishal.biyani@biyani.xyz>"]
+version = "1.0.0"
 
 [deps]
 Dash = "1b08a953-4be3-4667-9a23-3db579824955"

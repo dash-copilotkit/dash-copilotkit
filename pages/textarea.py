@@ -211,7 +211,7 @@ app.layout = html.Div([
         public_api_key='your-copilotkit-cloud-api-key',
         instructions='You are a helpful writing assistant.',
         placeholder='Start writing your content here...',
-        value='',  # Initial value
+        value='',
         rows=10,
         auto_resize=True
     ),
@@ -236,8 +236,8 @@ if __name__ == '__main__':
 
 # Callbacks
 @callback(
-    Output("textarea-toggle-icon", "className"),
-    Output("textarea-api-key", "type"),
+    Output("textarea-toggle-icon", "className", allow_duplicate=True),
+    Output("textarea-api-key", "type", allow_duplicate=True),
     Input("textarea-toggle-password", "n_clicks"),
     prevent_initial_call=True
 )
@@ -247,12 +247,13 @@ def toggle_password_visibility(n_clicks):
     return "fas fa-eye", "password"
 
 @callback(
-    Output("textarea-demo-container", "children"),
+    Output("textarea-demo-container", "children", allow_duplicate=True),
     [Input("textarea-api-key", "value"),
      Input("textarea-instructions", "value"),
      Input("textarea-placeholder", "value"),
      Input("textarea-height", "value"),
-     Input("textarea-width", "value")]
+     Input("textarea-width", "value")],
+    prevent_initial_call=True
 )
 def update_textarea_demo(api_key, instructions, placeholder, height, width):
     if not api_key:
@@ -267,19 +268,35 @@ def update_textarea_demo(api_key, instructions, placeholder, height, width):
         public_api_key=api_key,
         instructions=instructions or "You are a helpful writing assistant.",
         placeholder=placeholder or "Start typing here...",
-        value="",
+        value="",  # Initialize with empty string
         height=height or "300px",
         width=width or "100%"
     )
 
+# REMOVED THE PROBLEMATIC CIRCULAR CALLBACK
+# The React component handles the value updates internally, no need for Python callback
+
 @callback(
-    Output("textarea-output", "children"),
+    Output("textarea-output", "children", allow_duplicate=True),
     Input("textarea-demo", "value"),
     prevent_initial_call=True
 )
 def display_textarea_output(value):
-    if value:
-        return value
+    """Display the current textarea content."""
+
+    # Handle case where value might be an event object (shouldn't happen now)
+    if isinstance(value, dict):
+        if 'target' in value and 'value' in value['target']:
+            actual_value = value['target']['value']
+        elif 'currentTarget' in value and 'value' in value['currentTarget']:
+            actual_value = value['currentTarget']['value']
+        else:
+            actual_value = ""
+    else:
+        actual_value = value
+    
+    if actual_value:
+        return actual_value
     return "No content yet. Start typing in the textarea above..."
 
 # Page layout

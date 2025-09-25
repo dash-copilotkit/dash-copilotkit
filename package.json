@@ -1,15 +1,16 @@
 {
   "name": "dash_copilotkit_components",
-  "version": "0.0.1",
-  "description": "dash-copilotkit",
-"repository": {
+  "version": "1.0.0",
+  "description": "AI-powered chat interfaces for Dash applications using CopilotKit. Supports chat, popup, sidebar, and textarea UI types with both CopilotKit Cloud and bring-your-own-key configurations.",
+  "keywords": ["dash", "plotly", "react", "copilotkit", "ai", "chat", "assistant", "llm", "openai"],
+  "repository": {
     "type": "git",
-    "url": "git://github.com/dash-copilotkit/dash-copilotkit-components.git"
+    "url": "git://github.com/dash-copilotkit/dash-copilotkit.git"
   },
   "bugs": {
-    "url": "https://github.com/dash-copilotkit/dash-copilotkit-components/issues"
+    "url": "https://github.com/dash-copilotkit/dash-copilotkit/issues"
   },
-  "homepage": "https://github.com/dash-copilotkit/dash-copilotkit-components",
+  "homepage": "https://dash-copilotkit.biyani.xyz",
   "main": "build/index.js",
   "scripts": {
     "start": "webpack serve --config ./webpack.serve.config.js --open",
@@ -21,7 +22,7 @@
     "build": "npm run build:js && npm run build:backends",
     "build:activated": "npm run build:js && npm run build:backends-activated"
   },
-  "author": "Vishal Biyani <vishal.biyani@xyz.com>",
+  "author": "Vishal Biyani <vishal.biyani@biyani.xyz>",
   "license": "MIT",
   "dependencies": {
     "ramda": "^0.26.1",

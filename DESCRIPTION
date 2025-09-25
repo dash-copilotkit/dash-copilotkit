@@ -1,13 +1,13 @@
 Package: dashCopilotkitComponents
-Title: dash-copilotkit
-Version: 0.0.1
-Description: dash-copilotkit
+Title: AI-powered chat interfaces for Dash applications using CopilotKit. Supports chat, popup, sidebar, and textarea UI types with both CopilotKit Cloud and bring-your-own-key configurations.
+Version: 1.0.0
+Description: AI-powered chat interfaces for Dash applications using CopilotKit. Supports chat, popup, sidebar, and textarea UI types with both CopilotKit Cloud and bring-your-own-key configurations.
 Depends: R (>= 3.0.2)
 Imports: 
 Suggests: 
 License: MIT + file LICENSE
-URL: https://github.com/dash-copilotkit/dash-copilotkit-components
-BugReports: https://github.com/dash-copilotkit/dash-copilotkit-components/issues
+URL: https://dash-copilotkit.biyani.xyz
+BugReports: https://github.com/dash-copilotkit/dash-copilotkit/issues
 Encoding: UTF-8
 LazyData: true
 KeepSource: true

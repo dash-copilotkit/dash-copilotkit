@@ -2,4 +2,11 @@
 # Switch into a virtual environment
 # pip install -r requirements.txt
 
-dash[dev,testing]>=1.15.0
+dash[dev,testing]>=2.0.0
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-html>=3.0.0
+selenium>=4.0.0
+webdriver-manager>=3.8.0
+pytest-xdist>=3.0.0
+pytest-mock>=3.10.0
